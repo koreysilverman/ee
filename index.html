@@ -49,7 +49,7 @@ body{font-family:var(--font-body);background:var(--cream);color:var(--black);ove
 .loader.done{opacity:0;pointer-events:none}
 /* Fallback: reveal hidden elements after 3.5s in case GSAP doesn't load */
 @keyframes revealFallback{0%,95%{opacity:0}100%{opacity:1;transform:none}}
-.line-inner,.t-inner,.hero-cutout,.link-list-item,.gallery-hero-img,.gallery-card,.about-columns,.portrait-card{
+.line-inner,.t-inner,.hero-ut,.link-list-item,.gallery-hero-img,.gallery-card,.about-columns,.portrait-card{
   animation:revealFallback 3.5s ease forwards;
 }
 .loader-name{
@@ -116,8 +116,8 @@ nav{
 .hero-cutout{
   position:absolute;z-index:3;
   width:80%;
-  left:50%;top:50%;
-  transform:translate(-50%,-50%);
+  left:50%;top:5%;
+  transform:translate(-50%,-5%);
   opacity:0;
   pointer-events:none;
   filter:drop-shadow(0 10px 30px rgba(0,0,0,.15));
