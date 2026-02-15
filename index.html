@@ -212,9 +212,9 @@ nav{
   opacity:0;transform:scale(.92);
 }
 /* Left: white bikini window */
-.gallery-hero-img:nth-child(1){object-fit:cover;object-position:center 200%}
+.gallery-hero-img:nth-child(1){object-fit:cover;object-position:center 70%}
 /* Middle: cowboy hat */
-.gallery-hero-img:nth-child(2){object-position:center 200%}
+.gallery-hero-img:nth-child(2){object-position:center 70%}
 /* Right: red bikini pool */
 .gallery-hero-img:nth-child(3){object-position:center top}
 .gallery-scroll{
@@ -763,7 +763,7 @@ if(innerWidth >= 768){
     for(let i = 0; i < 3; i++){
       const h = document.createElement('span');
       h.className = 'heart-p';
-      h.textContent = Math.random() > 0.5 ? 'â™¥' : 'â¤';
+      h.textContent = Math.random() > 0.5 ? '♥' : '❤';
       const sz = Math.random()*16+8;
       h.style.cssText = `font-size:${sz}px;left:${Math.random()*innerWidth}px;top:${Math.random()*innerHeight}px;z-index:5;color:rgba(196,30,58,${Math.random()*.1+.04});position:absolute`;
       homeSection.appendChild(h);
@@ -781,7 +781,7 @@ window.addEventListener('scroll', () => {
   for(let i = 0; i < 8; i++){
     const h = document.createElement('span');
     h.className = 'heart-p';
-    h.textContent = Math.random() > 0.3 ? 'â™¥' : 'â¤';
+    h.textContent = Math.random() > 0.3 ? '♥' : '❤';
     const sz = Math.random()*16+6;
     h.style.cssText = `font-size:${sz}px;left:${Math.random()*innerWidth}px;top:${scrollY + Math.random()*innerHeight}px;z-index:1;color:rgba(196,30,58,${Math.random()*.1+.04});position:absolute;pointer-events:none`;
     document.body.appendChild(h);
@@ -819,7 +819,7 @@ document.addEventListener('mousemove', e => {
   for(let i = 0; i < 2; i++){
     const h = document.createElement('span');
     h.className = 'heart-p';
-    h.textContent = 'â™¥';
+    h.textContent = '♥';
     const sz = Math.random() * 10 + 6;
     h.style.cssText = `font-size:${sz}px;left:${e.clientX + Math.random()*24-12}px;top:${e.clientY + Math.random()*24-12}px;color:rgba(196,30,58,${Math.random()*.4+.15})`;
     document.body.appendChild(h);
@@ -846,7 +846,7 @@ document.addEventListener('click', e => {
   // Kiss stamp
   const kiss = document.createElement('span');
   kiss.className = 'heart-p';
-  kiss.textContent = 'ðŸ’‹';
+  kiss.textContent = '♥';
   kiss.style.cssText = `font-size:28px;left:${e.clientX}px;top:${e.clientY}px;transform:translate(-50%,-50%)`;
   document.body.appendChild(kiss);
   gsap.to(kiss, { scale: 1.8, opacity: 0, rotation: Math.random()*30-15, duration: .7, ease: 'power2.out', onComplete: () => kiss.remove() });
@@ -881,7 +881,7 @@ document.querySelectorAll('.hero-letter').forEach(letter => {
     for(let i = 0; i < 3; i++){
       const h = document.createElement('span');
       h.className = 'heart-p';
-      h.textContent = 'â™¥';
+      h.textContent = '♥';
       const sz = Math.random()*10+8;
       h.style.cssText = `font-size:${sz}px;left:${r.left + r.width/2 + Math.random()*20-10}px;top:${r.top + Math.random()*10}px;color:rgba(196,30,58,${Math.random()*.4+.2})`;
       document.body.appendChild(h);
